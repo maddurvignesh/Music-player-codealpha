@@ -2,7 +2,7 @@
 
 A premium, feature-rich web-based music player built with HTML, CSS, and JavaScript.
 
-[Live Demo](https://music-player-codealpha.vercel.app/)
+[Live Demo](https://music-player-codealpha.vercel.app/) — [GitHub](https://github.com/maddurvignesh)
 
 ## Features
 
