@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auralis — Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="floating-orb"></div>
+  <div class="floating-orb"></div>
+  <div class="floating-orb"></div>
+
+  <div class="player-container">
+    <div class="player">
+      <div class="header">
+        <span class="logo">&#9835; Auralis</span>
+        <span class="now-playing">Now Playing</span>
+      </div>
+
+      <div class="art-section">
+        <div class="art-frame" id="artFrame">
+          <div class="art-placeholder" id="albumArt">
+            <div class="art-bg" id="artBg"></div>
+            <span class="art-icon">&#127925;</span>
+          </div>
+        </div>
+        <div class="visualizer" id="visualizer">
+          <canvas id="visualizerCanvas"></canvas>
+        </div>
+      </div>
+
+      <div class="song-info">
+        <h2 class="song-title" id="songTitle">No Track Selected</h2>
+        <p class="song-artist" id="songArtist">Select a song from the playlist</p>
+      </div>
+
+      <div class="progress-area">
+        <span class="time" id="currentTime">0:00</span>
+        <div class="progress-bar" id="progressBar">
+          <div class="progress-fill" id="progressFill"></div>
+          <div class="progress-thumb" id="progressThumb"></div>
+        </div>
+        <span class="time" id="totalDuration">0:00</span>
+      </div>
+
+      <div class="controls">
+        <button class="ctrl-btn" id="shuffleBtn" title="Shuffle">&#128257;</button>
+        <button class="ctrl-btn" id="prevBtn" title="Previous">&#9198;</button>
+        <button class="ctrl-btn play-btn" id="playBtn" title="Play">&#9654;</button>
+        <button class="ctrl-btn" id="nextBtn" title="Next">&#9199;</button>
+        <button class="ctrl-btn" id="repeatBtn" title="Repeat">&#128257;</button>
+      </div>
+
+      <div class="volume-area">
+        <span class="vol-icon">&#128266;</span>
+        <div class="volume-bar" id="volumeBar">
+          <div class="volume-fill" id="volumeFill"></div>
+          <div class="volume-thumb" id="volumeThumb"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="playlist-panel">
+      <div class="playlist-header">
+        <h3>Playlist</h3>
+        <span class="song-count" id="songCount">0 songs</span>
+      </div>
+      <div class="playlist" id="playlist"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">
+    <span class="toast-icon">&#127925;</span>
+    <div>
+      <div class="toast-text" id="toastText">Now Playing</div>
+      <div class="toast-sub" id="toastSub">Artist Name</div>
+    </div>
+  </div>
+
+  <audio id="audioPlayer"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
